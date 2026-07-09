@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 950px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
       line-height: 1.6;
@@ -31,9 +31,34 @@
     }
 
     .member {
+      display: flex;
+      gap: 22px;
       border-top: 1px solid #ddd;
-      padding-top: 18px;
-      margin-top: 18px;
+      padding-top: 22px;
+      margin-top: 22px;
+      align-items: flex-start;
+    }
+
+    .member:first-of-type {
+      border-top: none;
+      margin-top: 0;
+    }
+
+    .headshot {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background: #f1f1f1;
+    }
+
+    .member-info {
+      flex: 1;
+    }
+
+    .label {
+      font-weight: bold;
     }
 
     a {
@@ -43,6 +68,16 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    ul {
+      margin-top: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .member {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -57,8 +92,8 @@
     <h2>Project Overview</h2>
     <p>
       This website is the homepage for Project Team 4 in WAPH - Web Application Programming and Hacking.
-      Our final team project is a secure miniFacebook-style web application that applies full-stack web
-      development and secure programming practices.
+      Our final team project is a secure miniFacebook web application that applies full-stack web
+      development, secure programming practices, and teamwork through GitHub.
     </p>
   </section>
 
@@ -66,31 +101,67 @@
     <h2>Team Members</h2>
 
     <div class="member">
-      <h3>Artem Tikhonov</h3>
-      <p>
-        Artem is working on the team project setup, documentation, secure backend design,
-        and full-stack implementation.
-      </p>
-      <p>
-        Personal homepage:
-        <a href="https://github.com/tartem26" target="_blank">
-          Artem's GitHub User Profile Page
-        </a>
-      </p>
+      <img class="headshot"
+           src="https://media.licdn.com/dms/image/v2/D5603AQGHsYrNVhImMw/profile-displayphoto-scale_200_200/B56Z37SDI7IYAY-/0/1778037317630?e=2147483647&v=beta&t=jXWT2uXlcRMbRCYT_7qmW4x1P5ZVCDHP6LqRj3RCSqM"
+           alt="Artem Tikhonov headshot">
+
+      <div class="member-info">
+        <h3>Artem Tikhonov</h3>
+
+        <h4>Intro</h4>
+        <p>
+          <span class="label">Email:</span>
+          <a href="mailto:tikhonam@mail.uc.edu">tikhonam@mail.uc.edu</a>
+        </p>
+        <p>
+          <span class="label">Short bio:</span>
+          Artem Tikhonov is a CSE PhD student interested in AI/ML and Computer Vision.
+        </p>
+        <p>
+          <span class="label">Personal homepage:</span>
+          <a href="https://tartem26.github.io/individual_project1/" target="_blank">
+            Artem's Individual Project 1 Homepage
+          </a>
+        </p>
+
+        <h4>Project Responsibilities</h4>
+        <p>
+          Artem is working on the team project setup, documentation, secure backend design,
+          authentication planning, database structure, and full-stack implementation.
+        </p>
+      </div>
     </div>
 
     <div class="member">
-      <h3>Sophia Munoz</h3>
-      <p>
-        Sophia is a member of Project Team 4 and will contribute to the design,
-        implementation, testing, and documentation of the team project.
-      </p>
-      <p>
-        Personal homepage:
-        <a href="#" target="_blank">
-          Sophia's GitHub User Profile Page
-        </a>
-      </p>
+      <img class="headshot"
+           src="https://munozsophia.github.io/images/content/pfp.jpg"
+           alt="Sophia Munoz headshot">
+
+      <div class="member-info">
+        <h3>Sophia Munoz</h3>
+
+        <h4>Intro</h4>
+        <p>
+          <span class="label">Email:</span>
+          <a href="mailto:munozsa@mail.uc.edu">munozsa@mail.uc.edu</a>
+        </p>
+        <p>
+          <span class="label">Short bio:</span>
+          Sophia is a Computer Science student at the University of Cincinnati interested in Physics Simulation Development and Computer Graphics.
+        </p>
+        <p>
+          <span class="label">Personal homepage:</span>
+          <a href="https://munozsophia.github.io/" target="_blank">
+            Sophia's Individual Project 1 Homepage
+          </a>
+        </p>
+
+        <h4>Project Responsibilities</h4>
+        <p>
+          Sophia will contribute to the design, implementation, testing, documentation,
+          user interface, and feature review of the team project.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -100,12 +171,28 @@
       <li>User registration with email as username and password</li>
       <li>User login and logout</li>
       <li>Password change</li>
-      <li>Profile editing</li>
+      <li>Profile editing, including name, additional email, and phone</li>
       <li>Creating, editing, and deleting posts</li>
-      <li>Viewing and adding comments</li>
+      <li>Viewing and adding comments on posts</li>
       <li>Superuser account management features</li>
-      <li>Secure coding protections against common web attacks</li>
+      <li>Secure coding protections against XSS, SQL injection, CSRF, and session attacks</li>
     </ul>
+  </section>
+
+  <section>
+    <h2>Project Repositories</h2>
+    <p>
+      Public team homepage repository:
+      <a href="https://github.com/waph-uc-sm26-team4/waph-uc-sm26-team4.github.io" target="_blank">
+        waph-uc-sm26-team4.github.io
+      </a>
+    </p>
+    <p>
+      Private source code repository:
+      <a href="https://github.com/waph-uc-sm26-team4/waph-teamproject" target="_blank">
+        waph-teamproject
+      </a>
+    </p>
   </section>
 </body>
 </html>
